@@ -37,10 +37,14 @@
     position: relative;
     height: 20px;
     width: 20px;
-    margin: 10px;
+    margin: 15px;
+
 }
 
 .userlogin {
+    font-size: small;
+    justify-content: center;
+    align-content: center;
     height: 20px;
     width: 20px;
     color: gray;
@@ -49,10 +53,15 @@
 
 .pic {
     margin-right: 5px;
+    margin-left: 5px;
+    height: 25px;
+    width: 25px;
 }
 
 .login {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .usermenu {
@@ -60,4 +69,95 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.container1 {
+    top: 260px;
+    left: 90px;
+    position: absolute;
+}
+
+.gross {
+    font-size: xxx-large;
+}
+
+.klein {
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.container2 {
+    display: flex;
+    position: absolute;
+    top: 430px;
+    left: 90px;
+}
+
+.border {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+    width: 130px;
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+.blue {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+    width: 150px;
+    color: white;
+    background-color: rgb(20, 138, 255);
+    border: 1px solid rgb(20, 138, 255);
+    border-radius: 2px;
+}
+
+.bubble {
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble :hover {
+    cursor: pointer;
+}
+
+.bubble svg {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+}
+
+.container2 :hover {
+    cursor: pointer;
+}
+
+.border:hover {
+    background-color: rgba(211, 211, 211, 0.614);
+}
+
+.blue:hover {
+    background-color: rgb(14, 97, 180);
+    border-color: rgb(14, 97, 180);
 }
