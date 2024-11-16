@@ -3,6 +3,19 @@
     height: 100%;
 }
 
+.content {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: linear-gradient(0deg, #fff, rgba(0, 0, 0, .001) 50%), linear-gradient(90deg, #fff, rgba(0, 0, 0, .001) 50%);
+}
+
 .topbar {
     height: 65px;
     background-color: black;
@@ -125,12 +138,23 @@
     border-radius: 2px;
 }
 
+.sidenote {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-small;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+    color: grey;
+    line-height: 1.5;
+}
+
 .bubble {
     background-color: black;
     border: 3px solid black;
     border-radius: 10px;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     position: fixed;
     right: 25px;
     bottom: 25px;
@@ -144,8 +168,8 @@
 }
 
 .bubble svg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     filter: invert(100%);
 }
 
@@ -160,4 +184,13 @@
 .blue:hover {
     background-color: rgb(14, 97, 180);
     border-color: rgb(14, 97, 180);
+}
+
+.white:hover {
+    filter: brightness(2);
+    cursor: pointer;
+}
+
+.Logo:hover {
+    cursor: pointer;
 }
