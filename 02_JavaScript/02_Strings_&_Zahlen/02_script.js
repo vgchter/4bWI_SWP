@@ -1,22 +1,19 @@
-let a = 7.123
-let b = 2.854
+let a = 7;
+let b = 8;
 
-let result = a + b
-console.log("a+b=" + result)
+let ab = a - b;
 
-let name = "Peter";
-console.log("name: " + name)
+// +, -, *, /
 
-console.log("Das Ergebnis von " + a + " plus " + b + " ist " + result)
+let c = 7.4;
+let d = 7.3
 
-//Aufgabe aus dem Video:
-//Ergebnis von 17.4 / 3.9
-let c = 17.4
-let d = 3.9
-result = c / d
-console.log("The result of " + c + " divided by " + d + " is " + result)
+result = c + d;
+console.log(result);
 
+// Text STRINGS
 
-let vorname = "Peter"
-let nachname = "Gsteu"
-console.log("Ich heiße " + vorname + " " + nachname)
+let name = "Valentin";
+console.log(name);
+
+console.log("Das Ergebnis von " + a + " und " + b + " ist " + ab);
