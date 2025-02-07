@@ -11,6 +11,7 @@ function loadPeople() {
     data.forEach(element => {
         html += "<div>" + element.firstName + " " + element.lastName + "</div>";
     });
-}
 
+    document.getElementById("content").innerHTML = html;
+}
 loadPeople();
