@@ -24,7 +24,7 @@ function printTasks() {
         html += "<div class='task' > " + element.title +
             " - " + element.isDone +
             " <div onClick = 'setIsDone(" + element.id +
-            ")' > Done</div > <div>Delete</div></divs> ";
+            ")' > Done</div > <div>Delete</div></div> ";
 
     });
 
