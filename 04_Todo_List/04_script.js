@@ -21,7 +21,7 @@ function printTasks() {
     let html = "";
     todos.forEach((element) => {
         let style = element.isDone ? "green" : "none";
-        html += "<div class='task' > " + element.title +
+        html += "<div class='task' style='background-color:" + style + "'> " + element.title +
             " - " + element.isDone +
             " <div onClick = 'setIsDone(" + element.id +
             ")' > Done</div > <div>Delete</div></div> ";
