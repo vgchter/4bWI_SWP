@@ -5,10 +5,10 @@ function loadFootballTable() {
         .then(response => response.json())
         .then(json => {
             console.log(json);
-            let html = "<div id='table'>";
+            let html = "<div id='table' class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>";
 
             for (let i = 0; i < json.length; i++) {
-                html += `<div data-teamId="${json[i].teamInfoId}">${json[i].teamName}</div>`;
+                html += `<div class="border border-gray-400 rounded-md p-2 m-4 h-15 hover:cursor-pointer hover:bg-gray-200 flex shadow-lg items-center place-content-between" data-teamId="${json[i].teamInfoId}">${json[i].teamName}<img width="30px" src="${json[i].teamIconUrl}"/></div>`;
             }
             html += "</div>";
             document.getElementById("table").innerHTML = html;
@@ -29,7 +29,7 @@ function getNextMatchForTeam(teamId) {
             console.log(json);
             let html = "<div id='nextMatch'>";
             html += `<div>${json.matchDateTime}<div>`
-            html += `<div><img width="30px" src="${json.team1.teamIconUrl}"/>${json.team1.teamName} vs. ${json.team2.teamName}<img width="30px" src="${json.team1.teamIconUrl}"/><div>`;
+            html += `<div class="border border-gray-400 rounded-md"><img width="30px" src="${json.team1.teamIconUrl}"/>${json.team1.teamName} vs. ${json.team2.teamName}<img width="30px" src="${json.team2.teamIconUrl}"/><div>`;
             html += "</ div>";
             document.getElementById("nextMatch").innerHTML = html;
         });
