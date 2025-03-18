@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <h1 className="bg-green-200 p-3 text-center text-xl">Hello</h1>
-      <div className="grid grid-cols-2 sp">
+      <div className="grid grid-cols-2 sp gap-2 m-10">
         <Card name={"Herbert"} jobtitle={"Gärtner"} description={"In Rente"} />
         <Card name={"Rudolf"} jobtitle={"Sozialarbeiter"} description={"Bald in Rente"} />
       </div>
