@@ -6,7 +6,12 @@ type Props = {}
 export default function Sample201({ }: Props) {
   return (
     <>
-      <Card name='David' description='Profi-Programmierer' />
+      <div className='flex'>
+        <Card name='David' description='Profi-Programmierer' />
+        <Card name='Franz' description='Profi-Gärtner' />
+        <Card name='Klaus' description='Profi-Maler' />
+        <Card name='Rudolf' description='Profi-Schlosser' />
+      </div>
     </>
   )
 }

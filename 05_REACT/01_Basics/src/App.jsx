@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Sample201 />
+      <Sample2 />
     </>
   )
 }
