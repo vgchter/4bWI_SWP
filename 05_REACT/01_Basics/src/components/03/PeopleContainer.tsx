@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
 type Props = {}
+type Person = { name: string, avatar: string, jobtitle: string }
 
 export default function PeopleContainer({ }: Props) {
     const [people, setPeople] = useState([]);
-    const [filteredPeople, setfilteredpeople] = useState([]);
+    const [filteredPeople, setfilteredpeople] = useState<Person[]>([]);
 
     useEffect(() => {
         fetch("https://67b89061699a8a7baef48561.mockapi.io/person").then(
@@ -17,7 +18,7 @@ export default function PeopleContainer({ }: Props) {
     }, []);
 
     const filterPeople = (filter) => {
-        let filtered = people.filter(person => person.name.toLowerCase().includes(filter.toLowerCase()));
+        let filtered = people.filter((person: Person) => person.name.toLowerCase().includes(filter.toLowerCase()));
         setfilteredpeople(filtered);
     }
 
@@ -32,7 +33,7 @@ export default function PeopleContainer({ }: Props) {
             </div>
 
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 pt-28 pl-5 pr-5'>
-                {filteredPeople.map(person => {
+                {filteredPeople.map((person: Person) => {
                     return <Card name={person.name} imageUri={person.avatar} title={person.jobtitle}></Card>
                 })}
             </div>
