@@ -2,12 +2,13 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import Button from './Button'
+import Bottlepage from './Bottlepage'
 
-type Props = {name: string, price: string, amount: number, size?: number, imgUri?: string }
+type Props = { name: string, price: string, amount?:number, Orders:number, setOrders: React.Dispatch<React.SetStateAction<number>>, imgUri?: string }
 
-export default function Bottle({ name, price, amount, size, imgUri }: Props) {
+export default function Bottle({ name, price, amount, imgUri, Orders, setOrders }: Props) {
     const [Buy, setBuy] = useState(0);
-    const [currentAmount, setcurrentAmount] = useState(amount);
+    const [currentAmount, setcurrentAmount] = useState(100);
 
     //useEffect(() => {
       //  setcurrentAmount(currentAmount - 1);
@@ -22,11 +23,18 @@ export default function Bottle({ name, price, amount, size, imgUri }: Props) {
                     <div className=''>{currentAmount}</div>
                 </div>
                 <div className='ml-4' onClick={() => {
-                        setBuy(Buy + 1);
-                        setcurrentAmount(currentAmount - 1); 
-                    
-                    }}><Button text={'Buy: ' + Buy}/>
-
+                        if (currentAmount == 0){
+                            alert("Out of Stock");
+                        }
+                        else
+                        {
+                            setBuy(Buy + 1);
+                            setcurrentAmount(currentAmount - 1);
+                            setOrders(Orders => Orders + 1);
+                        }
+                    }}>
+                        
+                    <Button text={'Buy: ' + Buy}/>
                 </div>
             </div>
 
