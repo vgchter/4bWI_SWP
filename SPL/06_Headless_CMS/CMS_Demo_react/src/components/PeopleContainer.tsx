@@ -46,7 +46,7 @@ export default function PeopleContainer({}: Props) {
               name={person.name}
               imageUri={person.avatar}
               title={person.jobtitle}
-            ></Card>
+            />
           );
         })}
       </div>

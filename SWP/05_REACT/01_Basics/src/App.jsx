@@ -8,13 +8,14 @@ import Sample201 from './components/2.1/Sample201'
 import Sample3 from './components/03/Sample3'
 import Bottlepage from './components/Ueben/Bottlepage'
 import Counter from './components/Test/Counter'
+import PeopleContainer from './components/03/PeopleContainer'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Counter title='TITEL'/>
+      <PeopleContainer />
     </>
   )
 }
