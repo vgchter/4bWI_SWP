@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = { name: string; title: string; imageUri: string };
 
 export default function Card({ name, title, imageUri }: Props) {

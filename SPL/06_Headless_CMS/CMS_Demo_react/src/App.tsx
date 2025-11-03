@@ -1,5 +1,5 @@
 import "./App.css";
-import PeopleContainer from "./components/PeopleContainer";
+import PeopleContainer from "./components/Card-Website/PeopleContainer";
 
 function App() {
   return (
