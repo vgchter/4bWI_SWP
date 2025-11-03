@@ -13,14 +13,14 @@ export default function PeopleContainer() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#2f3308]">
+    <div className="min-h-screen bg-[#2D2B03]">
       <div className="flex justify-center items-center py-6 bg-[#2f3308]">
         <h1 className="font-extrabold text-4xl md:text-5xl text-white">
           HTL Dornbirn 5bWI
         </h1>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 p-8 justify-items-center">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] gap-4 p-4">
         {people.map((person) => (
           <Card
             key={person.id}
