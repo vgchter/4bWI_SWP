@@ -1,0 +1,52 @@
+@startuml TelematikSystem
+!theme plain
+title Use-Case Diagramm - Telematik Route Optimierung
+left to right direction
+actor "Benutzer" as User
+actor "Datenbank System" as DB
+
+rectangle "Telematik System" {
+
+    usecase "Einloggen" as UC1
+    usecase "Passwort überprüfen" as UC2
+    usecase "Passende DB zuteilen" as UC3
+
+    usecase "Auf Website zugreifen" as UC4
+    usecase "Telematik Register aufrufen" as UC5
+
+    usecase "Route auswählen" as UC6
+    usecase "Route anzeigen" as UC7
+    usecase "Route optimieren" as UC8
+
+    usecase "Neue Route visualisieren" as UC9
+    usecase "Alte Route zum Vergleich öffnen" as UC10
+    usecase "Routen vergleichen" as UC11
+}
+
+User --> UC1 : "meldet sich an"
+User --> UC6 : "wählt Route aus"
+User --> UC8 : "klickt Optimieren-Button"
+User --> UC11 : "vergleicht Routen"
+
+DB --> UC2 : "validiert Passwort"
+DB --> UC3 : "stellt DB bereit"
+
+UC1 ..> UC2 : <<include>>
+UC1 ..> UC3 : <<include>>
+UC4 ..> UC5 : <<include>>
+UC6 ..> UC7 : <<include>>
+UC8 ..> UC9 : <<include>>
+UC8 ..> UC10 : <<include>>
+
+UC9 ..> UC11 : <<extend>>
+UC10 ..> UC11 : <<extend>>
+
+UC1 --> UC4 : "nach erfolgreichem Login"
+UC4 --> UC5 : "Navigation zur Telematik"
+UC5 --> UC6 : "Zugriff auf Route-Auswahl"
+UC7 --> UC8 : "Route kann optimiert werden"
+
+note right of UC8 : "Spezieller Button für\ndieses Projekt"
+note bottom of UC11 : "Zwei Tabs:\n- Neue optimierte Route\n- Ursprüngliche Route"
+
+@enduml
